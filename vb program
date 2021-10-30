@@ -1,0 +1,23 @@
+'VB.Net program to reverse the given number 
+'using the "While" loop.
+
+Module Module1
+
+    Sub Main()
+        Dim number As Integer = 0
+        Dim remainder As Integer = 0
+        Dim reverse As Integer = 0
+
+        Console.Write("Enter the number: ")
+        number = Integer.Parse(Console.ReadLine())
+
+        While (number > 0)
+            remainder = number Mod 10
+            reverse = reverse * 10 + remainder
+            number = number / 10
+        End While
+
+        Console.WriteLine("Reverse: {0}", reverse)
+    End Sub
+    
+End Module
